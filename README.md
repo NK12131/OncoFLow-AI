@@ -75,10 +75,15 @@ Books on hospital calendar
 ## Tools:
 
 -mock_data
+
 -get_doctor_schedule
+
 -get_doctor_constraints
+
 -ompute_treatment_risk
+
 -find_available_slots
+
 -propose_schedule_changes
 -apply_schedule_changes
 -update_patient_preferences

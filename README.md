@@ -2,7 +2,7 @@
 
 Built Using IBM watsonx Orchestrate + Multi-Agent Workflows + PubMed Evidence Integration
 
-1. Overview
+## 1. Overview
 
 OncoFlow is an intelligent, multi-agent orchestration system designed to solve a real hospital problem: oncology departments struggle with scheduling due to doctor availability constraints, last-minute disruptions, and the critical timing requirements of chemotherapy and radiation therapy.
 
@@ -20,7 +20,7 @@ LLM-powered patient messaging
 
 All components run inside IBM watsonx Orchestrate, leveraging agents, skill flows, custom tools, and external APIs.
 
-2. Problem Statement
+## 2. Problem Statement
 
 Oncology scheduling is operationally complex and clinically fragile:
 
@@ -34,11 +34,11 @@ Communication overload falls on nurses & coordinators.
 
 OncoFlow solves this by orchestrating schedules, reacting to disruptions, and grounding decisions in medical evidence.
 
-3. Solution Architecture
+## 3. Solution Architecture
 
 OncoFlow uses a three-agent architecture:
 
-A. Orchestrator Agent
+### A. Orchestrator Agent
 
 Routes user intent:
 
@@ -54,7 +54,7 @@ pubmed_search
 
 Delegation to Scheduler/Disruption Agents
 
-B. Scheduler Agent (Planning)
+### B. Scheduler Agent (Planning)
 
 Optimizes daily/weekly oncology calendars.
 
@@ -72,27 +72,19 @@ Learns patient preferences
 
 Books on hospital calendar
 
-Tools:
+## Tools:
 
-mock_data
+-mock_data
+-get_doctor_schedule
+-get_doctor_constraints
+-ompute_treatment_risk
+-find_available_slots
+-propose_schedule_changes
+-apply_schedule_changes
+-update_patient_preferences
+-calendar_block_slot
 
-get_doctor_schedule
-
-get_doctor_constraints
-
-compute_treatment_risk
-
-find_available_slots
-
-propose_schedule_changes
-
-apply_schedule_changes
-
-update_patient_preferences
-
-calendar_block_slot
-
-C. Disruption Agent (Reactive)
+### C. Disruption Agent (Reactive)
 
 Handles unplanned events (doctor sick, system outage).
 
@@ -120,12 +112,12 @@ Tools:
 -escalate_to_human_scheduler
 -calendar_block_slot
 
-4. External Integrations
-A. Calendar Adapter
+## 4. External Integrations
+### A. Calendar Adapter
 
 Custom tool that blocks/updates time slots when appointments are booked or moved.
 
-B. PubMed Integration
+### B. PubMed Integration
 
 Used to justify clinical decisions.
 
@@ -133,8 +125,7 @@ OpenAPI imported from:
 openapi/pubmed-openapi.yaml
 
 Tool:
-
-pubmed_search
+-pubmed_search
 
 Used when:
 
@@ -142,7 +133,7 @@ User asks: “Why is this delay unsafe?”
 
 Or “Provide research evidence.”
 
-5. Key Features
+## 5. Key Features
 
 Real-time oncology schedule optimization
 
